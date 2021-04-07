@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image, ScrollView, Button } from 'react-native';
-import Form from './Form'
+import LoginForm from './LoginForm'
 
-export default function Sign() {
+
+export default function Login({navigation}) {
   return (
     <ScrollView>
     <SafeAreaView style={styles.safeArea}> 
@@ -15,18 +16,15 @@ export default function Sign() {
              but why would you do that,{'\n'}boy</Text>
           </View>
         </View>
-        <Form />     
+        <LoginForm navigation={navigation}/>     
       </View>
       </SafeAreaView>
       </ScrollView>
-      
-
   );
 }
 
 
 const styles = StyleSheet.create({
-
   main : {
      marginTop:100,
      paddingHorizontal:20,
@@ -37,21 +35,16 @@ const styles = StyleSheet.create({
     marginTop:30,
     textAlign : 'center',
   },
- 
   message : {
-    marginTop:20,
-    
-    
+    marginTop:20,  
   },
   messageText : {
     color:'#d4d8d9',
     fontSize:16,
-    
     textAlign:'center'
   },
    safeArea: {
     flex: 1,
     backgroundColor: '#343c4c',
   },
-
 })

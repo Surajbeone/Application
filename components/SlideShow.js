@@ -78,7 +78,9 @@ export default class SlideShow extends Component
           pagingEnabled
           onScroll={
             Animated.event(
-              [{ nativeEvent: { contentOffset: { x: this.animVal } } }]
+              [{ nativeEvent: { contentOffset: { x: this.animVal } } }],
+              {useNativeDriver:false}
+              
             )
           }
         >
